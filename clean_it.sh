@@ -19,19 +19,12 @@ fi
 
 echo -e $Yellow"Updating,upgrading and cleaning the system for you"$StopColor
 
-
 sudo apt-get update
-
 sudo apt-get upgrade
-
 sudo apt-get autoremove
-
 sudo apt-get autoclean
-
 sudo apt-get clean
-
 sudo apt-get -s clean
-
 rm -rf ~/.cache/thumbnails/*
 rm -r ~/.local/share/Trash/info/ && rm -r ~/.local/share/Trash/files/
 systemctl restart NetworkManager
@@ -39,4 +32,3 @@ journalctl --vacuum-time=10000d
 
 echo $Cyan"Cleaning finished!"$StopColor
 #It's just automated and so better!
-
